@@ -1,0 +1,54 @@
+@use "./styles/var" as var;
+@use "./styles/mixin" as mixins;
+
+#root {
+  width:100vw;
+  height:100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf5e3;
+}
+
+.App{
+  max-width: var.$max-width;
+  max-height: var.$max-height;
+  padding: 10px 100px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column; 
+  // border:1px solid rgb(107, 209, 6);
+  background-color: #f3f3f5;
+}
+
+.App-layout{
+  // border:1px solid red;
+  height: 100%;
+  // padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media screen and (min-width: 1440px) and (min-width: 1920px){
+  .App{
+    width: 1000px;
+    height:800px;
+   
+  }
+   
+}
+
+@include mixins.laptopM(){
+  .App{
+    width: 1200px;
+    height:700px;
+    padding: 30px 100px;
+  }
+   
+}
+
+
+

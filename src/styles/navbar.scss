@@ -1,0 +1,47 @@
+@use "./var" as var;
+@use "./mixin" as mixins;
+
+.navbar{
+    // border:1px solid rgb(35, 253, 35); 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.navbar-select-holder{
+    display: flex;
+}
+
+.navbar-navtitle-holder{
+    position: absolute;
+    display: flex;
+    // border:1px solid blue;
+    width:100%;
+    height: 40px;
+    justify-content: center;
+}
+
+.nav-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px 80px;
+    font-weight: 800;
+}
+
+@include mixins.laptopM{
+    .navbar{
+        max-width: var.$nav-width
+    }
+}
+

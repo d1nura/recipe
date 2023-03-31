@@ -1,0 +1,99 @@
+.card-holder{
+    // border:1px solid green;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:40px;
+   
+    &:last-child{
+        margin-right:0px;
+    }
+}
+
+.card{
+    // border:1px solid red;
+    width: 215px;
+    height: 255px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 5px 15px 15px rgba(128, 128, 128, 0.278);
+    display: flex;
+    flex-direction: column;
+    padding:25px;
+    padding-top:90px;
+    // margin-right:25px;
+    transition:.2s;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.306) ;
+    &:hover{
+        background-color: #efb52f;
+        color:white !important;
+        box-shadow: 5px 15px 15px #efb52f70;
+        .card-content{
+            color:white;
+        }
+        .card-content-dot{
+            color:white
+        }
+        .card-price-plus{
+            background-color: white;
+            color:#fcbc30;
+        }
+    }
+}
+
+.card-name{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding:10px 0px;
+}
+
+.card-content{
+    display: flex;
+    border-top:1px solid #f4ede4;
+    border-bottom:1px solid #f4ede4;
+    padding:12px 0px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color:#aeaaa2;
+    justify-content: space-between;
+}
+
+.card-content-dot{
+    color:#f9bc36;
+}
+
+.card-price-plus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height:25px;
+    font-size: 25px;
+    padding-bottom: 3px;
+    font-weight: 600;
+    background-color: #fcbc30;
+    color:white;
+    border-radius: 8px;
+}
+
+.card-price-holder{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.card-image{
+    position: absolute;
+    width:135px;
+    height:135px;
+    top:-50px;
+    right:50%;
+    transform:translateX(50%);
+}
+
