@@ -1,7 +1,6 @@
 @use "./mixin" as mixins;
 
 .card-holder{
-    // border:1px solid green;
     height: 100%;
     display: flex;
     align-items: center;
@@ -108,7 +107,6 @@
 @include mixins.laptopS{
     .card-holder{
         padding-top: 65px;
-        // border:1px solid red;
     }
     .card{
         width:180px;
