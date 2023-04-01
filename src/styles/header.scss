@@ -1,6 +1,5 @@
-.app-header{
-    // border:1px solid blue;
-}
+@use "./mixin" as mixins;
+
 
 .app-header-title{
     text-align: center;
@@ -13,4 +12,24 @@
     font-weight: 500;
     color:#6d6d6d;
     padding: 10px 0px;
+}
+
+
+@include mixins.laptopS{
+    .app-header-title{
+        font-size:30px;
+    }
+    .app-paragraph{
+        font-size: 14px;
+    }
+}
+
+@include mixins.mobile{
+    .app-header-title{
+        font-size:28px;
+        margin-top:20px
+    }
+    .app-paragraph{
+        font-size: 14px;
+    }
 }

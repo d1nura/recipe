@@ -3,14 +3,15 @@ import "../styles/button.scss";
 
 type button = {
   title: string;
+  className?: string;
 };
 
-export const Button = ({ title }: button) => {
+export const Button = ({ title, className }: button) => {
   return (
-    <button className="button-cart">
+    <button className={`button-cart ${className}`}>
       <div className="button-cart-content">
         <img className="button-cart-image" src={icon}></img>
-        {title}
+        <p className="button-cart-title">{title}</p>
       </div>
     </button>
   );

@@ -2,7 +2,6 @@
 @use "./mixin" as mixins;
 
 .navbar{
-    // border:1px solid rgb(35, 253, 35); 
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -13,13 +12,19 @@
     display: flex;
 }
 
+.navbar-select{
+    &:first-child{
+        margin-right: 10px;
+    }
+}
+
 .navbar-navtitle-holder{
     position: absolute;
     display: flex;
-    // border:1px solid blue;
-    width:100%;
     height: 40px;
     justify-content: center;
+    transform: translateX(-50%);
+    left:50%;
 }
 
 .nav-title{
@@ -45,3 +50,31 @@
     }
 }
 
+@include mixins.laptopS{
+    .nav-logo{
+        margin:0px 40px;
+    }
+}
+
+@include mixins.mobile{
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-select-holder{
+        justify-content: center;
+        order:3;
+    }
+    .navbar-navtitle-holder{
+        position: relative;
+        transform: none;
+        left:0;
+    }
+    .navbar-cart{
+        width: 200px;
+        height: 40px;
+        margin:10px 0px;
+    }
+}

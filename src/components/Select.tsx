@@ -7,11 +7,12 @@ type select = {
   title: string;
   url: string;
   style?: CSSProperties;
+  className?: string;
 };
 
-export const Select = ({ title, url, style }: select) => {
+export const Select = ({ title, url, style, className }: select) => {
   return (
-    <div className="select" style={style}>
+    <div className={`select ${className}`} style={style}>
       <div
         className="select-image-holder"
         style={{

@@ -1,3 +1,6 @@
+@use "./mixin" as mixins; 
+
+
 .select{
     display: flex;
     height:40px;
@@ -8,7 +11,7 @@
     border-radius: 10px;
     &:hover{
         cursor: pointer;
-        background-color: #f0eff4;
+        background-color: #ffffff;
     }
 }
 
@@ -37,4 +40,22 @@
     background-position: center;
     background-size: cover;
     margin-right: 10px;
+}
+
+@include mixins.laptopS{
+    .select{
+        padding:2px 6px;
+    }
+    .select-image-holder{
+        width:24px;
+        height:24px;
+        margin-right: 8px;
+        border:1px solid red;
+    }
+    .select-value{
+        font-size: 10px;
+    }
+    .select-downarrow{
+        font-size: 12px;
+    }
 }

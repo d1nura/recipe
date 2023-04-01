@@ -50,5 +50,33 @@
    
 }
 
+@include mixins.laptopM1(){
+  .App{
+    width: 1000px;
+    height:650px;
+    padding: 30px 50px;
+  }
+   
+}
 
 
+@include mixins.laptopS(){
+  .App{
+    width: 875px;
+    height:600px;
+    padding: 30px 50px;
+  }
+   
+}
+
+
+
+@include mixins.mobile(){
+  .App{
+    width: 95%;
+    height:95%;
+    padding: 30px;
+    overflow: scroll;
+  }
+   
+}

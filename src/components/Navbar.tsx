@@ -7,11 +7,12 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-select-holder">
         <Select
+          className="navbar-select"
           title="Location"
           url="https://flagcdn.com/256x192/us.png"
         ></Select>
         <Select
-          style={{ marginLeft: 20 }}
+          className="navbar-select"
           title="Loged In"
           url="https://i.pravatar.cc/300"
         ></Select>
@@ -21,7 +22,7 @@ export const Navbar = () => {
         <p className="nav-logo">Logo</p>
         <p className="nav-title">Contact</p>
       </div>
-      <Button title="My Cart"></Button>
+      <Button className="navbar-cart" title="My Cart"></Button>
     </nav>
   );
 };

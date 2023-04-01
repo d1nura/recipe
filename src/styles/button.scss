@@ -1,3 +1,5 @@
+@use "./mixin" as mixins;
+
 .button-cart{
     // width: 100px;
     background-color: black;
@@ -22,4 +24,17 @@
     align-items: center;
     justify-content: center;
    
+}
+
+@include mixins.laptopS{
+    .button-cart{
+        padding:0px 12px;
+    }
+    .button-cart-image{
+        width:18px;
+        height:24px;
+    }
+    .button-cart-title{
+        font-size: 12px;
+    }
 }
